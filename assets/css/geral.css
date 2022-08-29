@@ -1,27 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
-
-header {
-    background-color: #FFBE51;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+:root{
+    --primaria: #FFC107;
 }
 
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
+header {
+    background-color: var(--primaria);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 nav {
-    display: inline-block;
+    display: flex;
 }
 
 nav ul {
     padding: 0;
     margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    height: 100%;
 }
 
 nav ul li a {
@@ -29,14 +37,24 @@ nav ul li a {
     color: #FFFFFF;
     font-size: 20px;
     font-style: normal;
-    padding: 10px;
-    margin: 30px;
+    padding: 10px 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+nav ul li a:hover{
+    background-color: rgba(255,255,255,0.25);
+}
+
+nav ul li a.selecionado{
+    border-bottom: 5px solid rgba(255,255,255,0.5);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 body {
@@ -86,7 +104,7 @@ h1 {
 }
 
 .footer1 {
-    background-color: #FFBE51;
+    background-color: var(--primaria);
     font-size: 18px;
     display: flex;
     justify-content: space-around;
@@ -112,7 +130,7 @@ footer p {
 
 .container h1 {
     font-size: 40px;
-    color: #FFBE51;
+    color: var(--primaria);
     text-align: center;
 }
 
@@ -137,7 +155,7 @@ footer p {
 }
 
 .banhos button {
-    background-color: #FFC107;
+    background-color: var(--primaria);
     color: #FFFFFF;
     font-size: 16px;
     width: 245px;
@@ -183,7 +201,7 @@ form textarea {
 
 form button {
     color: #fff;
-    background-color: #FFC107;
+    background-color: var(--primaria);
     font-size: 18px;
     font-weight: 600;
     padding: 5px 20px;
@@ -214,17 +232,6 @@ form button {
     text-align: left;
 }
 
-
-/* LOGIN */
-
-header .headerLogin {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFC107;
-    /* box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25); */
-}
-
 .formLogin form {
     width: 245px;
 }
@@ -232,7 +239,7 @@ header .headerLogin {
 .formLogin h1 {
     text-align: left;
     margin-left: 60px;
-    color: #FFC107;
+    color: var(--primaria);
 }
 
 .formLogin button {
